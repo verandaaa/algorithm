@@ -1,3 +1,5 @@
+https://www.codetree.ai/training-field/frequent-problems/problems/codetree-mon-bread/description?page=3&pageSize=20
+
 # Solution 1 - JAVA
 ~~~java
 import java.io.BufferedReader;

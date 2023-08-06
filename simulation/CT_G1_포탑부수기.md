@@ -1,3 +1,5 @@
+https://www.codetree.ai/training-field/frequent-problems/problems/destroy-the-turret/description?page=3&pageSize=20
+
 # Solution 1 - JAVA
 ~~~java
 import java.io.*;
