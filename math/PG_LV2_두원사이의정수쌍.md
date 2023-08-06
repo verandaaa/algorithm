@@ -18,4 +18,4 @@ function solution(r1, r2) {
   
   
   
-![img](../0_image/PG_LV2_181187_두원사이의정수쌍_1.jpg)
+![img](../0_image/PG_LV2_두원사이의정수쌍_1.jpg)

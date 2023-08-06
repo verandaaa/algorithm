@@ -40,7 +40,7 @@ function solution(e, starts) {
   
   
   
-![img](../0_image/PG_LV3_138475_억억단을외우자_1.jpg)  
+![img](../0_image/PG_LV3_억억단을외우자_1.jpg)  
   
 
   
