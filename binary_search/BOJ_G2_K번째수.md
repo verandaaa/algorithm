@@ -1,3 +1,5 @@
+https://www.acmicpc.net/problem/1300
+
 # Pass 1 - JavaScript
 ~~~javascript
 let input = require("fs")
