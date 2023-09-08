@@ -1,3 +1,5 @@
+https://school.programmers.co.kr/learn/courses/15008/lessons/121684
+
 # Pass 1 - JavaScript
 ~~~javascript
 function solution(ability) {

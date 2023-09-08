@@ -1,3 +1,5 @@
+https://school.programmers.co.kr/learn/courses/15008/lessons/121685
+
 # Pass 1 - JavaScript
 ~~~javascript
 function solution(queries) {
