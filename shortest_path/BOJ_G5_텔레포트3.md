@@ -31,7 +31,6 @@ for (let i = 0; i < 8; i++) {
   }
 }
 //간선 정보 업데이트
-dis[0][7] = getJumpTime(xs, ys, xe, ye); //출발지 -> 도착지
 //모든 지점 서로
 for (let i = 0; i < 8; i++) {
   for (let j = 0; j < 8; j++) {
