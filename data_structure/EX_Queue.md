@@ -65,12 +65,29 @@ class Queue {
     if (!this.head) return null;
     const data = this.head.data;
     this.head = this.head.next;
+    if (!this.head) {
+      this.tail = null;
+    }
     this.size--;
     return data;
   }
 
   isEmpty() {
     return this.size === 0 ? true : false;
+  }
+
+  getSize() {
+    return this.size;
+  }
+
+  front() {
+    if (!this.head) return null;
+    return this.head.data;
+  }
+
+  rear() {
+    if (!this.tail) return null;
+    return this.tail.data;
   }
 }
 
