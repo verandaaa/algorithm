@@ -25,12 +25,12 @@
 
 ## 📊 요약
 
-총 **365** 문제를 풀었습니다.
+총 **366** 문제를 풀었습니다.
 
 | 사이트 | 문제 수 | 난이도 분포 |
 | --- | --- | --- |
 | [백준](https://www.acmicpc.net) | 281 | Platinum 1 · Gold 197 · Silver 83 |
-| [프로그래머스](https://school.programmers.co.kr) | 78 | Lv. 3 20 · Lv. 2 33 · Lv. 1 17 · PCCP 8 |
+| [프로그래머스](https://school.programmers.co.kr) | 79 | Lv. 3 20 · Lv. 2 33 · Lv. 1 18 · PCCP 8 |
 | [코드트리](https://www.codetree.ai) | 6 | Gold 6 |
 
 ## 🗂️ 유형별 문제 수
@@ -45,7 +45,7 @@
 | 03 | [그리디](greedy) | 정렬한 뒤 매번 가장 좋은 것을 고르면 답이 됨 | 29 |
 | 04 | [DP](dynamic_programming) | 작은 문제의 답을 저장해서 큰 문제를 풂 (메모이제이션 DFS 포함) | 44 |
 | 05 | [투 포인터](two_pointer) | 두 인덱스를 움직이며 구간이나 쌍을 찾음 (슬라이딩 윈도우 포함) | 23 |
-| 06 | [구현](implementation) | 문제 조건을 그대로 코드로 옮김 (파싱, 조건 분기, 날짜 계산) | 53 |
+| 06 | [구현](implementation) | 문제 조건을 그대로 코드로 옮김 (파싱, 조건 분기, 날짜 계산) | 54 |
 | 07 | [그래프 탐색](graph_traversal) | BFS/DFS로 정점·격자·상태를 탐색 (가중치 없는 최단 거리 포함) | 21 |
 | 08 | [완전탐색](brute_force) | 가능한 경우를 반복문이나 분할로 전부 직접 확인 | 4 |
 | 09 | [시뮬레이션](simulation) | 규칙에 따라 시간이나 턴을 진행시키며 상태 변화를 따라감 | 35 |
@@ -64,6 +64,7 @@
 
 | 문제 | 사이트 | 난이도 | 유형 | 풀이 | 기록 | 날짜 |
 | --- | --- | --- | --- | --- | --- | --- |
+| [택배 상자 꺼내기](https://school.programmers.co.kr/learn/courses/30/lessons/389478) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%ED%83%9D%EB%B0%B0%20%EC%83%81%EC%9E%90%20%EA%BA%BC%EB%82%B4%EA%B8%B0.md) | ✅ 1 | 2026-10-11 |
 | [기사단원의 무기](https://school.programmers.co.kr/learn/courses/30/lessons/136798) | 프로그래머스 | Lv. 1 | 수학 | [풀이](math/PG_LV1_%EA%B8%B0%EC%82%AC%EB%8B%A8%EC%9B%90%EC%9D%98%20%EB%AC%B4%EA%B8%B0.md) | ✅ 1 | 2026-10-04 |
 | [옹알이 (2)](https://school.programmers.co.kr/learn/courses/30/lessons/133499) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EC%98%B9%EC%95%8C%EC%9D%B4%20(2).md) | ✅ 1 | 2026-09-20 |
 | 햄버거 만들기 | 프로그래머스 | Lv. 1 | 자료구조 | [풀이](data_structure/PG_LV1_%ED%96%84%EB%B2%84%EA%B1%B0%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md) | ✅ 1 | 2026-09-12 |
@@ -73,7 +74,6 @@
 | [과일 장수](https://school.programmers.co.kr/learn/courses/30/lessons/135808) | 프로그래머스 | Lv. 1 | 그리디 | [풀이](greedy/PG_LV1_%EA%B3%BC%EC%9D%BC%20%EC%9E%A5%EC%88%98.md) | ✅ 1 | 2026-08-09 |
 | [문자열 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/140108) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%98%EB%88%84%EA%B8%B0.md) | ✅ 1 | 2026-08-02 |
 | [카드 뭉치](https://school.programmers.co.kr/learn/courses/30/lessons/159994) | 프로그래머스 | Lv. 1 | 백트래킹 | [풀이](backtracking/PG_LV1_%EC%B9%B4%EB%93%9C%20%EB%AD%89%EC%B9%98.md) | ✅ 1 | 2026-07-25 |
-| [개인정보 수집 유효기간](https://school.programmers.co.kr/learn/courses/30/lessons/150370) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A7%91%20%EC%9C%A0%ED%9A%A8%EA%B8%B0%EA%B0%84.md) | ✅ 1 | 2026-07-19 |
 
 ## 📚 전체 문제
 
@@ -270,7 +270,7 @@
 </details>
 
 <details>
-<summary><b>구현</b> (53)</summary>
+<summary><b>구현</b> (54)</summary>
 
 | 문제 | 사이트 | 난이도 | 풀이 | 기록 | 날짜 |
 | --- | --- | --- | --- | --- | --- |
@@ -325,6 +325,7 @@
 | [옹알이 (2)](https://school.programmers.co.kr/learn/courses/30/lessons/133499) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EC%98%B9%EC%95%8C%EC%9D%B4%20(2).md) | ✅ 1 | 2026-09-20 |
 | [중요한단어를스포방지](https://school.programmers.co.kr/learn/courses/30/lessons/468370?language=javascript) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EC%A4%91%EC%9A%94%ED%95%9C%EB%8B%A8%EC%96%B4%EB%A5%BC%EC%8A%A4%ED%8F%AC%EB%B0%A9%EC%A7%80.md) | ✅ 1 | 2026-05-31 |
 | [콜라 문제](https://school.programmers.co.kr/learn/courses/30/lessons/132267) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EC%BD%9C%EB%9D%BC%20%EB%AC%B8%EC%A0%9C.md) | ✅ 1 | 2026-08-23 |
+| [택배 상자 꺼내기](https://school.programmers.co.kr/learn/courses/30/lessons/389478) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%ED%83%9D%EB%B0%B0%20%EC%83%81%EC%9E%90%20%EA%BA%BC%EB%82%B4%EA%B8%B0.md) | ✅ 1 | 2026-10-11 |
 | [유전법칙](https://school.programmers.co.kr/learn/courses/15008/lessons/121685) | 프로그래머스 | PCCP | [풀이](implementation/PG_PCCP_%EC%9C%A0%EC%A0%84%EB%B2%95%EC%B9%99.md) | ✅ 1 | 2023-09-07 |
 | [카페확장](https://school.programmers.co.kr/learn/courses/15009/lessons/121689) | 프로그래머스 | PCCP | [풀이](implementation/PG_PCCP_%EC%B9%B4%ED%8E%98%ED%99%95%EC%9E%A5.md) | ✅ 1 | 2023-09-08 |
 
