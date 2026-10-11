@@ -5,6 +5,7 @@
 - 파일 이름: `사이트_난이도_문제이름.md` (예: `BOJ_G4_공유기설치.md`, `PG_LV2_숫자변환하기.md`)
 - 기록 방식: 틀린 풀이는 `# Fail N`, 통과한 풀이는 `# Pass N`으로 남깁니다. 아래 표의 **기록** 칸에서 ❌ → ✅ 로 보여요.
 - 풀이 양식: [TEMPLATE.md](TEMPLATE.md)
+- 풀이 추가: 루트에 위 이름 규칙대로 `.md`를 올리고 Claude Code에서 `/organize` → 분류 기준에 맞는 폴더로 옮기고 핵심 아이디어를 채워 줌 → 배운 점을 덧붙이고 커밋·push (README는 push 후 자동 갱신) ([명령 정의](.claude/skills/organize/SKILL.md))
 
 ## 분류 기준
 

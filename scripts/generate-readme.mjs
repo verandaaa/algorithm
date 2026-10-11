@@ -10,7 +10,7 @@ const README = path.join(ROOT, "README.md");
 const START = "<!-- AUTO-GENERATED:START -->";
 const END = "<!-- AUTO-GENERATED:END -->";
 
-const IGNORE_DIRS = new Set([".git", ".github", "0_image", "scripts", "node_modules"]);
+const IGNORE_DIRS = new Set(["0_image", "scripts", "node_modules"]); // 점(.)으로 시작하는 폴더도 제외
 const HOLD_DIR = "z_HOLD";
 
 // 분류 기준. [폴더, 이름, 이럴 때 여기]
@@ -68,7 +68,7 @@ function encodePath(p) {
 
 function walk(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (IGNORE_DIRS.has(entry.name)) continue;
+    if (IGNORE_DIRS.has(entry.name) || entry.name.startsWith(".")) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full, out);
     else if (entry.name.endsWith(".md") && dir !== ROOT) out.push(full);
