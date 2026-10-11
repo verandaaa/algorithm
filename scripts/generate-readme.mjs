@@ -13,28 +13,30 @@ const END = "<!-- AUTO-GENERATED:END -->";
 const IGNORE_DIRS = new Set([".git", ".github", "0_image", "scripts", "node_modules"]);
 const HOLD_DIR = "z_HOLD";
 
-const CATEGORY_NAMES = {
-  bfs: "BFS",
-  binary_search: "이분 탐색",
-  data_structure: "자료 구조",
-  dfs: "DFS / 백트래킹",
-  disjoint_set: "분리 집합",
-  divide_and_conquer: "분할 정복",
-  dynamic_programming: "다이나믹 프로그래밍",
-  graph_traversal: "그래프 탐색",
-  greedy: "그리디",
-  implementation: "구현",
-  math: "수학",
-  minimum_spanning_tree: "최소 스패닝 트리",
-  prefix_sum: "누적 합",
-  shortest_path: "최단 경로",
-  simulation: "시뮬레이션",
-  string: "문자열",
-  topological_sorting: "위상 정렬",
-  tree: "트리",
-  trie: "트라이",
-  two_pointer: "투 포인터",
-};
+// 분류 기준. [폴더, 이름, 이럴 때 여기]
+const CATEGORIES = [
+  ["data_structure", "자료구조", "스택·큐·덱·힙·해시맵·셋 같은 자료구조의 성질이 풀이의 핵심"],
+  ["tree", "트리", "부모-자식 관계, 트리 순회, 서브트리, LCA처럼 트리 구조를 다룸"],
+  ["math", "수학", "소수·약수·GCD, 경우의 수, 식을 세워 푸는 문제"],
+  ["greedy", "그리디", "정렬한 뒤 매번 가장 좋은 것을 고르면 답이 됨"],
+  ["dynamic_programming", "DP", "작은 문제의 답을 저장해서 큰 문제를 풂 (메모이제이션 DFS 포함)"],
+  ["two_pointer", "투 포인터", "두 인덱스를 움직이며 구간이나 쌍을 찾음 (슬라이딩 윈도우 포함)"],
+  ["implementation", "구현", "문제 조건을 그대로 코드로 옮김 (파싱, 조건 분기, 날짜 계산)"],
+  ["graph_traversal", "그래프 탐색", "BFS/DFS로 정점·격자·상태를 탐색 (가중치 없는 최단 거리 포함)"],
+  ["brute_force", "완전탐색", "가능한 경우를 반복문이나 분할로 전부 직접 확인"],
+  ["simulation", "시뮬레이션", "규칙에 따라 시간이나 턴을 진행시키며 상태 변화를 따라감"],
+  ["binary_search", "이분탐색", "범위나 답(파라메트릭 서치)을 절반씩 줄여서 찾음"],
+  ["backtracking", "백트래킹", "재귀로 하나씩 고르고 되돌리며 순열·조합·부분집합을 만듦"],
+  ["divide_and_conquer", "분할정복", "문제를 쪼개 재귀로 풀고 합침 (거듭제곱, 쿼드트리)"],
+  ["prefix_sum", "누적합", "미리 계산한 누적합으로 구간 합을 빠르게 구함 (2차원 포함)"],
+  ["string", "문자열", "문자열을 다루는 것 자체가 핵심 (팰린드롬, 패턴 찾기 등)"],
+  ["shortest_path", "최단거리", "가중치가 있는 최단 거리 (다익스트라, 플로이드, 벨만-포드, 0-1 BFS)"],
+  ["topological_sorting", "위상정렬", "먼저 해야 하는 일이 정해진 작업들의 순서"],
+  ["disjoint_set", "분리집합", "Union-Find로 집합을 합치거나 같은 집합인지 판정"],
+  ["minimum_spanning_tree", "최소 스패닝 트리", "모든 정점을 최소 비용으로 연결 (크루스칼, 프림)"],
+  ["trie", "트라이", "문자열 접두사 트리"],
+];
+const CATEGORY_NAMES = Object.fromEntries(CATEGORIES.map(([dir, name]) => [dir, name]));
 
 const SITES = {
   BOJ: { name: "백준", url: "https://www.acmicpc.net" },
@@ -186,15 +188,23 @@ function build() {
   }
   push("");
 
-  // 유형별 개수
-  const categories = [...new Set(solutions.map((s) => s.category))].sort(
-    (a, b) => solutions.filter((s) => s.category === b).length - solutions.filter((s) => s.category === a).length
-  );
+  // 유형별 개수 (분류 기준 순서, 기준에 없는 폴더는 뒤에)
+  const present = new Set(solutions.map((s) => s.category));
+  const categories = [
+    ...CATEGORIES.map(([dir]) => dir).filter((dir) => present.has(dir)),
+    ...[...present].filter((dir) => !(dir in CATEGORY_NAMES)).sort(),
+  ];
   push("## 🗂️ 유형별 문제 수", "");
-  push("| 유형 | 문제 수 | 폴더 |", "| --- | --- | --- |");
-  for (const c of categories) {
-    const n = solutions.filter((s) => s.category === c).length;
-    push(`| ${CATEGORY_NAMES[c] ?? c} | ${n} | [\`${c}/\`](${encodePath(c)}) |`);
+  push("> 헷갈릴 때는 위의 [분류 기준](#분류-기준)을 따릅니다.", "");
+  push("| # | 유형 | 이럴 때 여기 | 문제 수 |", "| --- | --- | --- | --- |");
+  CATEGORIES.forEach(([dir, name, desc], i) => {
+    const n = solutions.filter((s) => s.category === dir).length;
+    const label = n ? `[${name}](${encodePath(dir)})` : name; // 빈 폴더는 GitHub에 없으므로 링크하지 않음
+    push(`| ${String(i).padStart(2, "0")} | ${label} | ${desc} | ${n} |`);
+  });
+  for (const dir of categories.filter((dir) => !(dir in CATEGORY_NAMES))) {
+    const n = solutions.filter((s) => s.category === dir).length;
+    push(`| - | [${dir}](${encodePath(dir)}) | ⚠️ 분류 기준에 없는 폴더 | ${n} |`);
   }
   push("");
 
