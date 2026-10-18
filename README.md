@@ -25,12 +25,12 @@
 
 ## 📊 요약
 
-총 **366** 문제를 풀었습니다.
+총 **367** 문제를 풀었습니다.
 
 | 사이트 | 문제 수 | 난이도 분포 |
 | --- | --- | --- |
 | [백준](https://www.acmicpc.net) | 281 | Platinum 1 · Gold 197 · Silver 83 |
-| [프로그래머스](https://school.programmers.co.kr) | 79 | Lv. 3 20 · Lv. 2 33 · Lv. 1 18 · PCCP 8 |
+| [프로그래머스](https://school.programmers.co.kr) | 80 | Lv. 3 20 · Lv. 2 33 · Lv. 1 19 · PCCP 8 |
 | [코드트리](https://www.codetree.ai) | 6 | Gold 6 |
 
 ## 🗂️ 유형별 문제 수
@@ -45,7 +45,7 @@
 | 03 | [그리디](greedy) | 정렬한 뒤 매번 가장 좋은 것을 고르면 답이 됨 | 29 |
 | 04 | [DP](dynamic_programming) | 작은 문제의 답을 저장해서 큰 문제를 풂 (메모이제이션 DFS 포함) | 44 |
 | 05 | [투 포인터](two_pointer) | 두 인덱스를 움직이며 구간이나 쌍을 찾음 (슬라이딩 윈도우 포함) | 23 |
-| 06 | [구현](implementation) | 문제 조건을 그대로 코드로 옮김 (파싱, 조건 분기, 날짜 계산) | 54 |
+| 06 | [구현](implementation) | 문제 조건을 그대로 코드로 옮김 (파싱, 조건 분기, 날짜 계산) | 55 |
 | 07 | [그래프 탐색](graph_traversal) | BFS/DFS로 정점·격자·상태를 탐색 (가중치 없는 최단 거리 포함) | 21 |
 | 08 | [완전탐색](brute_force) | 가능한 경우를 반복문이나 분할로 전부 직접 확인 | 4 |
 | 09 | [시뮬레이션](simulation) | 규칙에 따라 시간이나 턴을 진행시키며 상태 변화를 따라감 | 35 |
@@ -64,6 +64,7 @@
 
 | 문제 | 사이트 | 난이도 | 유형 | 풀이 | 기록 | 날짜 |
 | --- | --- | --- | --- | --- | --- | --- |
+| [동영상 재생기](https://school.programmers.co.kr/learn/courses/30/lessons/340213) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EB%8F%99%EC%98%81%EC%83%81%20%EC%9E%AC%EC%83%9D%EA%B8%B0.md) | ✅ 1 | 2026-10-18 |
 | [택배 상자 꺼내기](https://school.programmers.co.kr/learn/courses/30/lessons/389478) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%ED%83%9D%EB%B0%B0%20%EC%83%81%EC%9E%90%20%EA%BA%BC%EB%82%B4%EA%B8%B0.md) | ✅ 1 | 2026-10-11 |
 | [기사단원의 무기](https://school.programmers.co.kr/learn/courses/30/lessons/136798) | 프로그래머스 | Lv. 1 | 수학 | [풀이](math/PG_LV1_%EA%B8%B0%EC%82%AC%EB%8B%A8%EC%9B%90%EC%9D%98%20%EB%AC%B4%EA%B8%B0.md) | ✅ 1 | 2026-10-04 |
 | [옹알이 (2)](https://school.programmers.co.kr/learn/courses/30/lessons/133499) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EC%98%B9%EC%95%8C%EC%9D%B4%20(2).md) | ✅ 1 | 2026-09-20 |
@@ -73,7 +74,6 @@
 | [삼총사](https://school.programmers.co.kr/learn/courses/30/lessons/131705) | 프로그래머스 | Lv. 1 | 백트래킹 | [풀이](backtracking/PG_LV1_%EC%82%BC%EC%B4%9D%EC%82%AC.md) | ✅ 1 | 2026-08-15 |
 | [과일 장수](https://school.programmers.co.kr/learn/courses/30/lessons/135808) | 프로그래머스 | Lv. 1 | 그리디 | [풀이](greedy/PG_LV1_%EA%B3%BC%EC%9D%BC%20%EC%9E%A5%EC%88%98.md) | ✅ 1 | 2026-08-09 |
 | [문자열 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/140108) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%98%EB%88%84%EA%B8%B0.md) | ✅ 1 | 2026-08-02 |
-| [카드 뭉치](https://school.programmers.co.kr/learn/courses/30/lessons/159994) | 프로그래머스 | Lv. 1 | 백트래킹 | [풀이](backtracking/PG_LV1_%EC%B9%B4%EB%93%9C%20%EB%AD%89%EC%B9%98.md) | ✅ 1 | 2026-07-25 |
 
 ## 📚 전체 문제
 
@@ -270,7 +270,7 @@
 </details>
 
 <details>
-<summary><b>구현</b> (54)</summary>
+<summary><b>구현</b> (55)</summary>
 
 | 문제 | 사이트 | 난이도 | 풀이 | 기록 | 날짜 |
 | --- | --- | --- | --- | --- | --- |
@@ -319,6 +319,7 @@
 | [개인정보 수집 유효기간](https://school.programmers.co.kr/learn/courses/30/lessons/150370) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A7%91%20%EC%9C%A0%ED%9A%A8%EA%B8%B0%EA%B0%84.md) | ✅ 1 | 2026-07-19 |
 | [노란불신호등](https://school.programmers.co.kr/learn/courses/30/lessons/468371?language=javascript) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EB%85%B8%EB%9E%80%EB%B6%88%EC%8B%A0%ED%98%B8%EB%93%B1.md) | ✅ 1 | 2026-05-23 |
 | [대충 만든 자판](https://school.programmers.co.kr/learn/courses/30/lessons/160586) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EB%8C%80%EC%B6%A9%20%EB%A7%8C%EB%93%A0%20%EC%9E%90%ED%8C%90.md) | ✅ 1 | 2026-07-11 |
+| [동영상 재생기](https://school.programmers.co.kr/learn/courses/30/lessons/340213) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EB%8F%99%EC%98%81%EC%83%81%20%EC%9E%AC%EC%83%9D%EA%B8%B0.md) | ✅ 1 | 2026-10-18 |
 | [문자열 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/140108) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%98%EB%88%84%EA%B8%B0.md) | ✅ 1 | 2026-08-02 |
 | [바탕화면정리](https://school.programmers.co.kr/learn/courses/30/lessons/161990) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EB%B0%94%ED%83%95%ED%99%94%EB%A9%B4%EC%A0%95%EB%A6%AC.md) | ✅ 1 | 2026-06-28 |
 | [성격 유형 검사하기](https://school.programmers.co.kr/learn/courses/30/lessons/118666) | 프로그래머스 | Lv. 1 | [풀이](implementation/PG_LV1_%EC%84%B1%EA%B2%A9%20%EC%9C%A0%ED%98%95%20%EA%B2%80%EC%82%AC%ED%95%98%EA%B8%B0.md) | ✅ 1 | 2026-08-30 |
