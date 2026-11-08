@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 480" width="750" height="480" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <rect width="750" height="480" fill="#ffffff"/>
+  <text x="30" y="32" font-size="17" font-weight="bold" fill="#111827">t = "3141592", p = "271"</text>
+  <text x="262" y="32" font-size="15" fill="#374151">→ len = 3, pNum = 271, 시작 current = "31" (len - 1글자)</text>
+  <rect x="30" y="48" width="16" height="16" rx="3" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="52" y="61" font-size="13" fill="#374151">이번에 붙인 t[i]</text>
+  <rect x="185" y="48" width="16" height="16" rx="3" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="207" y="61" font-size="13" fill="#374151">창에 남아 있는 글자</text>
+  <rect x="365" y="48" width="16" height="16" rx="3" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="387" y="61" font-size="13" fill="#374151">비교 후 버릴 맨 앞 글자</text>
+  <g font-size="12" fill="#6b7280" text-anchor="middle">
+    <text x="122" y="92">0</text>
+    <text x="170" y="92">1</text>
+    <text x="218" y="92">2</text>
+    <text x="266" y="92">3</text>
+    <text x="314" y="92">4</text>
+    <text x="362" y="92">5</text>
+    <text x="410" y="92">6</text>
+    <text x="490" y="92">current</text>
+    <text x="590" y="92">current &lt;= pNum</text>
+    <text x="690" y="92">answer</text>
+  </g>
+  <!-- i = 2 -->
+  <text x="30" y="128" font-size="14" fill="#374151" font-family="Consolas, 'D2Coding', monospace">i = 2</text>
+  <rect x="100" y="102" width="44" height="40" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="122" y="128" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">3</text>
+  <rect x="148" y="102" width="44" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="170" y="128" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="196" y="102" width="44" height="40" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="218" y="128" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">4</text>
+  <rect x="244" y="102" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="266" y="128" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="292" y="102" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="314" y="128" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">5</text>
+  <rect x="340" y="102" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="362" y="128" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">9</text>
+  <rect x="388" y="102" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="410" y="128" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">2</text>
+  <text x="490" y="128" font-size="16" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">"314"</text>
+  <text x="590" y="128" font-size="15" font-weight="normal" text-anchor="middle" fill="#9ca3af">314 &gt; 271</text>
+  <text x="690" y="128" font-size="16" font-weight="normal" text-anchor="middle" fill="#6b7280" font-family="Consolas, 'D2Coding', monospace">0</text>
+  <!-- i = 3 -->
+  <text x="30" y="176" font-size="14" fill="#374151" font-family="Consolas, 'D2Coding', monospace">i = 3</text>
+  <rect x="100" y="150" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="122" y="176" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">3</text>
+  <rect x="148" y="150" width="44" height="40" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="170" y="176" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="196" y="150" width="44" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="218" y="176" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">4</text>
+  <rect x="244" y="150" width="44" height="40" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="266" y="176" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="292" y="150" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="314" y="176" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">5</text>
+  <rect x="340" y="150" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="362" y="176" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">9</text>
+  <rect x="388" y="150" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="410" y="176" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">2</text>
+  <text x="490" y="176" font-size="16" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">"141"</text>
+  <text x="590" y="176" font-size="15" font-weight="bold" text-anchor="middle" fill="#ea580c">141 ≤ 271</text>
+  <text x="690" y="176" font-size="16" font-weight="bold" text-anchor="middle" fill="#ea580c" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <!-- i = 4 -->
+  <text x="30" y="224" font-size="14" fill="#374151" font-family="Consolas, 'D2Coding', monospace">i = 4</text>
+  <rect x="100" y="198" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="122" y="224" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">3</text>
+  <rect x="148" y="198" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="170" y="224" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="196" y="198" width="44" height="40" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="218" y="224" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">4</text>
+  <rect x="244" y="198" width="44" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="266" y="224" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="292" y="198" width="44" height="40" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="314" y="224" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">5</text>
+  <rect x="340" y="198" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="362" y="224" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">9</text>
+  <rect x="388" y="198" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="410" y="224" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">2</text>
+  <text x="490" y="224" font-size="16" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">"415"</text>
+  <text x="590" y="224" font-size="15" font-weight="normal" text-anchor="middle" fill="#9ca3af">415 &gt; 271</text>
+  <text x="690" y="224" font-size="16" font-weight="normal" text-anchor="middle" fill="#6b7280" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <!-- i = 5 -->
+  <text x="30" y="272" font-size="14" fill="#374151" font-family="Consolas, 'D2Coding', monospace">i = 5</text>
+  <rect x="100" y="246" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="122" y="272" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">3</text>
+  <rect x="148" y="246" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="170" y="272" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="196" y="246" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="218" y="272" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">4</text>
+  <rect x="244" y="246" width="44" height="40" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="266" y="272" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="292" y="246" width="44" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="314" y="272" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">5</text>
+  <rect x="340" y="246" width="44" height="40" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="362" y="272" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">9</text>
+  <rect x="388" y="246" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="410" y="272" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">2</text>
+  <text x="490" y="272" font-size="16" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">"159"</text>
+  <text x="590" y="272" font-size="15" font-weight="bold" text-anchor="middle" fill="#ea580c">159 ≤ 271</text>
+  <text x="690" y="272" font-size="16" font-weight="bold" text-anchor="middle" fill="#ea580c" font-family="Consolas, 'D2Coding', monospace">2</text>
+  <!-- i = 6 -->
+  <text x="30" y="320" font-size="14" fill="#374151" font-family="Consolas, 'D2Coding', monospace">i = 6</text>
+  <rect x="100" y="294" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="122" y="320" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">3</text>
+  <rect x="148" y="294" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="170" y="320" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="196" y="294" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="218" y="320" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">4</text>
+  <rect x="244" y="294" width="44" height="40" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="266" y="320" font-size="17" text-anchor="middle" fill="#9ca3af" font-family="Consolas, 'D2Coding', monospace">1</text>
+  <rect x="292" y="294" width="44" height="40" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="314" y="320" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">5</text>
+  <rect x="340" y="294" width="44" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="362" y="320" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">9</text>
+  <rect x="388" y="294" width="44" height="40" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="410" y="320" font-size="17" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">2</text>
+  <text x="490" y="320" font-size="16" text-anchor="middle" fill="#111827" font-family="Consolas, 'D2Coding', monospace">"592"</text>
+  <text x="590" y="320" font-size="15" font-weight="normal" text-anchor="middle" fill="#9ca3af">592 &gt; 271</text>
+  <text x="690" y="320" font-size="16" font-weight="normal" text-anchor="middle" fill="#6b7280" font-family="Consolas, 'D2Coding', monospace">2</text>
+  <rect x="30" y="358" width="690" height="104" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="48" y="388" font-size="14" fill="#ea580c" font-family="Consolas, 'D2Coding', monospace">current += t[i]</text>
+  <text x="370" y="388" font-size="14" fill="#374151">오른쪽 글자를 붙여 len글자를 만든다</text>
+  <text x="48" y="417" font-size="14" fill="#111827" font-family="Consolas, 'D2Coding', monospace">Number(current) &lt;= pNum</text>
+  <text x="370" y="417" font-size="14" fill="#374151">숫자로 비교해서 맞으면 answer++</text>
+  <text x="48" y="446" font-size="14" fill="#dc2626" font-family="Consolas, 'D2Coding', monospace">current = current.substring(1, len)</text>
+  <text x="370" y="446" font-size="14" fill="#374151">맨 앞 글자를 버려 다음 칸으로 민다</text>
+</svg>
