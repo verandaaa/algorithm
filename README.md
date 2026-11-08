@@ -25,12 +25,12 @@
 
 ## 📊 요약
 
-총 **369** 문제를 풀었습니다.
+총 **370** 문제를 풀었습니다.
 
 | 사이트 | 문제 수 | 난이도 분포 |
 | --- | --- | --- |
 | [백준](https://www.acmicpc.net) | 281 | Platinum 1 · Gold 197 · Silver 83 |
-| [프로그래머스](https://school.programmers.co.kr) | 82 | Lv. 3 20 · Lv. 2 33 · Lv. 1 21 · PCCP 8 |
+| [프로그래머스](https://school.programmers.co.kr) | 83 | Lv. 3 20 · Lv. 2 33 · Lv. 1 22 · PCCP 8 |
 | [코드트리](https://www.codetree.ai) | 6 | Gold 6 |
 
 ## 🗂️ 유형별 문제 수
@@ -44,7 +44,7 @@
 | 02 | [수학](math) | 소수·약수·GCD, 경우의 수, 식을 세워 푸는 문제 | 16 |
 | 03 | [그리디](greedy) | 정렬한 뒤 매번 가장 좋은 것을 고르면 답이 됨 | 29 |
 | 04 | [DP](dynamic_programming) | 작은 문제의 답을 저장해서 큰 문제를 풂 (메모이제이션 DFS 포함) | 44 |
-| 05 | [투 포인터](two_pointer) | 두 인덱스를 움직이며 구간이나 쌍을 찾음 (슬라이딩 윈도우 포함) | 23 |
+| 05 | [투 포인터](two_pointer) | 두 인덱스를 움직이며 구간이나 쌍을 찾음 (슬라이딩 윈도우 포함) | 24 |
 | 06 | [구현](implementation) | 문제 조건을 그대로 코드로 옮김 (파싱, 조건 분기, 날짜 계산) | 56 |
 | 07 | [그래프 탐색](graph_traversal) | BFS/DFS로 정점·격자·상태를 탐색 (가중치 없는 최단 거리 포함) | 21 |
 | 08 | [완전탐색](brute_force) | 가능한 경우를 반복문이나 분할로 전부 직접 확인 | 4 |
@@ -64,6 +64,7 @@
 
 | 문제 | 사이트 | 난이도 | 유형 | 풀이 | 기록 | 날짜 |
 | --- | --- | --- | --- | --- | --- | --- |
+| [크기가 작은 부분 문자열](https://school.programmers.co.kr/learn/courses/30/lessons/147355) | 프로그래머스 | Lv. 1 | 투 포인터 | [풀이](two_pointer/PG_LV1_%ED%81%AC%EA%B8%B0%EA%B0%80%20%EC%9E%91%EC%9D%80%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.md) | ✅ 1 | 2026-11-08 |
 | [푸드 파이트 대회](https://school.programmers.co.kr/learn/courses/30/lessons/134240) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%ED%91%B8%EB%93%9C%20%ED%8C%8C%EC%9D%B4%ED%8A%B8%20%EB%8C%80%ED%9A%8C.md) | ✅ 1 | 2026-11-01 |
 | [달리기 경주](https://school.programmers.co.kr/learn/courses/30/lessons/178871) | 프로그래머스 | Lv. 1 | 자료구조 | [풀이](data_structure/PG_LV1_%EB%8B%AC%EB%A6%AC%EA%B8%B0%20%EA%B2%BD%EC%A3%BC.md) | ✅ 1 | 2026-10-25 |
 | [동영상 재생기](https://school.programmers.co.kr/learn/courses/30/lessons/340213) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EB%8F%99%EC%98%81%EC%83%81%20%EC%9E%AC%EC%83%9D%EA%B8%B0.md) | ✅ 1 | 2026-10-18 |
@@ -73,7 +74,6 @@
 | 햄버거 만들기 | 프로그래머스 | Lv. 1 | 자료구조 | [풀이](data_structure/PG_LV1_%ED%96%84%EB%B2%84%EA%B1%B0%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md) | ✅ 1 | 2026-09-12 |
 | [성격 유형 검사하기](https://school.programmers.co.kr/learn/courses/30/lessons/118666) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EC%84%B1%EA%B2%A9%20%EC%9C%A0%ED%98%95%20%EA%B2%80%EC%82%AC%ED%95%98%EA%B8%B0.md) | ✅ 1 | 2026-08-30 |
 | [콜라 문제](https://school.programmers.co.kr/learn/courses/30/lessons/132267) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EC%BD%9C%EB%9D%BC%20%EB%AC%B8%EC%A0%9C.md) | ✅ 1 | 2026-08-23 |
-| [삼총사](https://school.programmers.co.kr/learn/courses/30/lessons/131705) | 프로그래머스 | Lv. 1 | 백트래킹 | [풀이](backtracking/PG_LV1_%EC%82%BC%EC%B4%9D%EC%82%AC.md) | ✅ 1 | 2026-08-15 |
 
 ## 📚 전체 문제
 
@@ -240,7 +240,7 @@
 </details>
 
 <details>
-<summary><b>투 포인터</b> (23)</summary>
+<summary><b>투 포인터</b> (24)</summary>
 
 | 문제 | 사이트 | 난이도 | 풀이 | 기록 | 날짜 |
 | --- | --- | --- | --- | --- | --- |
@@ -267,6 +267,7 @@
 | [가장긴팰린드롬](https://school.programmers.co.kr/learn/courses/30/lessons/12904) | 프로그래머스 | Lv. 3 | [풀이](two_pointer/PG_LV3_%EA%B0%80%EC%9E%A5%EA%B8%B4%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC.md) | ✅ 1 | 2024-06-06 |
 | [두큐합같게만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667) | 프로그래머스 | Lv. 2 | [풀이](two_pointer/PG_LV2_%EB%91%90%ED%81%90%ED%95%A9%EA%B0%99%EA%B2%8C%EB%A7%8C%EB%93%A4%EA%B8%B0.md) | ✅ 1 | 2023-06-30 |
 | [연속된부분수열의합](https://school.programmers.co.kr/learn/courses/30/lessons/178870) | 프로그래머스 | Lv. 2 | [풀이](two_pointer/PG_LV2_%EC%97%B0%EC%86%8D%EB%90%9C%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%ED%95%A9.md) | ✅ 1 | 2023-06-11 |
+| [크기가 작은 부분 문자열](https://school.programmers.co.kr/learn/courses/30/lessons/147355) | 프로그래머스 | Lv. 1 | [풀이](two_pointer/PG_LV1_%ED%81%AC%EA%B8%B0%EA%B0%80%20%EC%9E%91%EC%9D%80%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.md) | ✅ 1 | 2026-11-08 |
 
 </details>
 
