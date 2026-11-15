@@ -25,12 +25,12 @@
 
 ## 📊 요약
 
-총 **370** 문제를 풀었습니다.
+총 **371** 문제를 풀었습니다.
 
 | 사이트 | 문제 수 | 난이도 분포 |
 | --- | --- | --- |
 | [백준](https://www.acmicpc.net) | 281 | Platinum 1 · Gold 197 · Silver 83 |
-| [프로그래머스](https://school.programmers.co.kr) | 83 | Lv. 3 20 · Lv. 2 33 · Lv. 1 22 · PCCP 8 |
+| [프로그래머스](https://school.programmers.co.kr) | 84 | Lv. 3 20 · Lv. 2 33 · Lv. 1 23 · PCCP 8 |
 | [코드트리](https://www.codetree.ai) | 6 | Gold 6 |
 
 ## 🗂️ 유형별 문제 수
@@ -39,7 +39,7 @@
 
 | # | 유형 | 이럴 때 여기 | 문제 수 |
 | --- | --- | --- | --- |
-| 00 | [자료구조](data_structure) | 스택·큐·덱·힙·해시맵·셋 같은 자료구조의 성질이 풀이의 핵심 | 25 |
+| 00 | [자료구조](data_structure) | 스택·큐·덱·힙·해시맵·셋 같은 자료구조의 성질이 풀이의 핵심 | 26 |
 | 01 | [트리](tree) | 부모-자식 관계, 트리 순회, 서브트리, LCA처럼 트리 구조를 다룸 | 8 |
 | 02 | [수학](math) | 소수·약수·GCD, 경우의 수, 식을 세워 푸는 문제 | 16 |
 | 03 | [그리디](greedy) | 정렬한 뒤 매번 가장 좋은 것을 고르면 답이 됨 | 29 |
@@ -64,6 +64,7 @@
 
 | 문제 | 사이트 | 난이도 | 유형 | 풀이 | 기록 | 날짜 |
 | --- | --- | --- | --- | --- | --- | --- |
+| [명예의 전당 (1)](https://school.programmers.co.kr/learn/courses/30/lessons/138477) | 프로그래머스 | Lv. 1 | 자료구조 | [풀이](data_structure/PG_LV1_%EB%AA%85%EC%98%88%EC%9D%98%20%EC%A0%84%EB%8B%B9%20(1).md) | ✅ 1 | 2026-11-15 |
 | [크기가 작은 부분 문자열](https://school.programmers.co.kr/learn/courses/30/lessons/147355) | 프로그래머스 | Lv. 1 | 투 포인터 | [풀이](two_pointer/PG_LV1_%ED%81%AC%EA%B8%B0%EA%B0%80%20%EC%9E%91%EC%9D%80%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.md) | ✅ 1 | 2026-11-08 |
 | [푸드 파이트 대회](https://school.programmers.co.kr/learn/courses/30/lessons/134240) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%ED%91%B8%EB%93%9C%20%ED%8C%8C%EC%9D%B4%ED%8A%B8%20%EB%8C%80%ED%9A%8C.md) | ✅ 1 | 2026-11-01 |
 | [달리기 경주](https://school.programmers.co.kr/learn/courses/30/lessons/178871) | 프로그래머스 | Lv. 1 | 자료구조 | [풀이](data_structure/PG_LV1_%EB%8B%AC%EB%A6%AC%EA%B8%B0%20%EA%B2%BD%EC%A3%BC.md) | ✅ 1 | 2026-10-25 |
@@ -73,12 +74,11 @@
 | [옹알이 (2)](https://school.programmers.co.kr/learn/courses/30/lessons/133499) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EC%98%B9%EC%95%8C%EC%9D%B4%20(2).md) | ✅ 1 | 2026-09-20 |
 | 햄버거 만들기 | 프로그래머스 | Lv. 1 | 자료구조 | [풀이](data_structure/PG_LV1_%ED%96%84%EB%B2%84%EA%B1%B0%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md) | ✅ 1 | 2026-09-12 |
 | [성격 유형 검사하기](https://school.programmers.co.kr/learn/courses/30/lessons/118666) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EC%84%B1%EA%B2%A9%20%EC%9C%A0%ED%98%95%20%EA%B2%80%EC%82%AC%ED%95%98%EA%B8%B0.md) | ✅ 1 | 2026-08-30 |
-| [콜라 문제](https://school.programmers.co.kr/learn/courses/30/lessons/132267) | 프로그래머스 | Lv. 1 | 구현 | [풀이](implementation/PG_LV1_%EC%BD%9C%EB%9D%BC%20%EB%AC%B8%EC%A0%9C.md) | ✅ 1 | 2026-08-23 |
 
 ## 📚 전체 문제
 
 <details>
-<summary><b>자료구조</b> (25)</summary>
+<summary><b>자료구조</b> (26)</summary>
 
 | 문제 | 사이트 | 난이도 | 풀이 | 기록 | 날짜 |
 | --- | --- | --- | --- | --- | --- |
@@ -106,6 +106,7 @@
 | [전화번호목록](https://school.programmers.co.kr/learn/courses/30/lessons/42577) | 프로그래머스 | Lv. 2 | [풀이](data_structure/PG_LV2_%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%EB%AA%A9%EB%A1%9D.md) | ✅ 1 | 2023-10-06 |
 | [주식가격](https://school.programmers.co.kr/learn/courses/30/lessons/42584) | 프로그래머스 | Lv. 2 | [풀이](data_structure/PG_LV2_%EC%A3%BC%EC%8B%9D%EA%B0%80%EA%B2%A9.md) | ✅ 1 | 2023-10-13 |
 | [달리기 경주](https://school.programmers.co.kr/learn/courses/30/lessons/178871) | 프로그래머스 | Lv. 1 | [풀이](data_structure/PG_LV1_%EB%8B%AC%EB%A6%AC%EA%B8%B0%20%EA%B2%BD%EC%A3%BC.md) | ✅ 1 | 2026-10-25 |
+| [명예의 전당 (1)](https://school.programmers.co.kr/learn/courses/30/lessons/138477) | 프로그래머스 | Lv. 1 | [풀이](data_structure/PG_LV1_%EB%AA%85%EC%98%88%EC%9D%98%20%EC%A0%84%EB%8B%B9%20(1).md) | ✅ 1 | 2026-11-15 |
 | 햄버거 만들기 | 프로그래머스 | Lv. 1 | [풀이](data_structure/PG_LV1_%ED%96%84%EB%B2%84%EA%B1%B0%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md) | ✅ 1 | 2026-09-12 |
 
 </details>
