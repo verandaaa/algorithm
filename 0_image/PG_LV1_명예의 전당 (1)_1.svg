@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 600" width="760" height="600" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="600" fill="#ffffff"/>
+
+  <!-- 헤더 -->
+  <text x="30" y="34" font-size="16" font-weight="bold" fill="#111827">k = 3, score = [10, 100, 20, 150, 1, 100, 200]</text>
+  <text x="30" y="56" font-size="13" fill="#6b7280">최소 힙(pqueue)에 상위 k개 점수만 남기면 루트 = 명예의 전당 최하위 점수</text>
+
+  <!-- 4일째 단계 -->
+  <text x="30" y="88" font-size="14" font-weight="bold" fill="#374151">4일째: todayScore = 150 (힙이 이미 k개로 가득 참)</text>
+
+  <!-- 트리 1: 전 -->
+  <text x="130" y="116" font-size="13" text-anchor="middle" fill="#6b7280">전</text>
+  <g stroke="#9ca3af" stroke-width="1.5">
+    <line x1="130" y1="148" x2="90" y2="200"/>
+    <line x1="130" y1="148" x2="170" y2="200"/>
+  </g>
+  <g stroke-width="1.5" font-size="14" text-anchor="middle">
+    <circle cx="130" cy="148" r="19" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="130" y="153" fill="#111827">10</text>
+    <circle cx="90" cy="208" r="19" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="90" y="213" fill="#111827">20</text>
+    <circle cx="170" cy="208" r="19" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="170" y="213" fill="#111827">100</text>
+  </g>
+
+  <line x1="215" y1="190" x2="265" y2="190" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 트리 2: enqueue(150) -->
+  <text x="380" y="116" font-size="13" text-anchor="middle" fill="#ea580c" font-weight="bold">enqueue(150)</text>
+  <g stroke="#9ca3af" stroke-width="1.5">
+    <line x1="380" y1="148" x2="340" y2="200"/>
+    <line x1="380" y1="148" x2="420" y2="200"/>
+  </g>
+  <line x1="340" y1="208" x2="310" y2="258" stroke="#ea580c" stroke-width="1.5"/>
+  <g stroke-width="1.5" font-size="14" text-anchor="middle">
+    <circle cx="380" cy="148" r="19" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="380" y="153" fill="#111827">10</text>
+    <circle cx="340" cy="208" r="19" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="340" y="213" fill="#111827">20</text>
+    <circle cx="420" cy="208" r="19" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="420" y="213" fill="#111827">100</text>
+    <circle cx="310" cy="268" r="19" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+    <text x="310" y="273" fill="#ea580c" font-weight="bold">150</text>
+  </g>
+  <text x="380" y="300" font-size="12" text-anchor="middle" fill="#6b7280">size가 k를 넘음 → dequeue</text>
+
+  <line x1="465" y1="190" x2="515" y2="190" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 트리 3: dequeue -->
+  <text x="630" y="116" font-size="13" text-anchor="middle" fill="#dc2626" font-weight="bold">dequeue() → 10 제거</text>
+  <g stroke="#9ca3af" stroke-width="1.5">
+    <line x1="630" y1="148" x2="590" y2="200"/>
+    <line x1="630" y1="148" x2="670" y2="200"/>
+  </g>
+  <g stroke-width="1.5" font-size="14" text-anchor="middle">
+    <circle cx="630" cy="148" r="19" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="630" y="153" fill="#2563eb" font-weight="bold">20</text>
+    <circle cx="590" cy="208" r="19" fill="#fff7ed" stroke="#ea580c"/>
+    <text x="590" y="213" fill="#111827">150</text>
+    <circle cx="670" cy="208" r="19" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="670" y="213" fill="#111827">100</text>
+  </g>
+  <text x="630" y="300" font-size="12" text-anchor="middle" fill="#2563eb">peek() = 20 → answer[3]</text>
+
+  <!-- 날짜별 표 -->
+  <text x="30" y="340" font-size="14" font-weight="bold" fill="#374151">날마다 힙에 남는 점수와 peek()</text>
+  <line x1="30" y1="372" x2="730" y2="372" stroke="#d1d5db" stroke-width="1"/>
+  <g font-size="13" fill="#6b7280">
+    <text x="40" y="364">날</text>
+    <text x="100" y="364">todayScore</text>
+    <text x="230" y="364">힙 안의 점수 (상위 k개)</text>
+    <text x="560" y="364">peek() = answer</text>
+  </g>
+  <g font-size="13" fill="#374151">
+    <text x="40" y="394">1</text><text x="100" y="394">10</text><text x="230" y="394">{10}</text>
+    <text x="40" y="418">2</text><text x="100" y="418">100</text><text x="230" y="418">{10, 100}</text>
+    <text x="40" y="442">3</text><text x="100" y="442">20</text><text x="230" y="442">{10, 20, 100}</text>
+    <text x="40" y="466">4</text><text x="100" y="466">150</text><text x="230" y="466">{20, 100, 150}</text><text x="340" y="466" fill="#9ca3af">← 10 제거</text>
+    <text x="40" y="490">5</text><text x="100" y="490">1</text><text x="230" y="490">{20, 100, 150}</text><text x="340" y="490" fill="#9ca3af">← 1을 넣자마자 1 제거</text>
+    <text x="40" y="514">6</text><text x="100" y="514">100</text><text x="230" y="514">{100, 100, 150}</text><text x="350" y="514" fill="#9ca3af">← 20 제거</text>
+    <text x="40" y="538">7</text><text x="100" y="538">200</text><text x="230" y="538">{100, 150, 200}</text><text x="350" y="538" fill="#9ca3af">← 100 제거</text>
+  </g>
+  <g font-size="13" fill="#2563eb" font-weight="bold">
+    <text x="560" y="394">10</text>
+    <text x="560" y="418">10</text>
+    <text x="560" y="442">20</text>
+    <text x="560" y="466">20</text>
+    <text x="560" y="490">20</text>
+    <text x="560" y="514">100</text>
+    <text x="560" y="538">100</text>
+  </g>
+
+  <!-- 코드 -->
+  <g font-family="Consolas, 'D2Coding', monospace" font-size="12" fill="#374151">
+    <text x="30" y="572">pqueue.enqueue(todayScore);  pqueue.dequeue();</text>
+    <text x="30" y="590">answer.push(pqueue.peek());</text>
+  </g>
+  <text x="470" y="572" font-size="12" fill="#6b7280">// size가 k를 넘으면 가장 작은 값만 뺀다</text>
+  <text x="470" y="590" font-size="12" fill="#6b7280">// 루트가 k등 점수</text>
+</svg>
