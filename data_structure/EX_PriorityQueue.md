@@ -27,6 +27,14 @@ class PriorityQueue {
       return target;
     }
 
+    peek() {
+      if (this.isEmpty()) {
+        return null;
+      }
+
+      return this.queue[0];
+    }
+
     isEmpty() {
       return this.queue.length === 0;
     }
@@ -116,6 +124,14 @@ class PriorityQueue {
       }
 
       return target;
+    }
+
+    peek() {
+      if (this.isEmpty()) {
+        return null;
+      }
+
+      return this.queue[0];
     }
 
     isEmpty() {
