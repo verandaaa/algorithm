@@ -26,7 +26,7 @@
 
 ## 📊 요약
 
-총 **371** 문제를 풀었습니다. (SQL 4문제는 아래 SQL 섹션에 따로 모았습니다.)
+총 **371** 문제를 풀었습니다. (SQL 5문제는 아래 SQL 섹션에 따로 모았습니다.)
 
 | 사이트 | 문제 수 | 난이도 분포 |
 | --- | --- | --- |
@@ -611,12 +611,12 @@
 
 ## 🗃️ SQL
 
-총 **4** 문제를 풀었습니다. 유형은 각 풀이 파일의 `유형:` 줄을 따릅니다.
+총 **5** 문제를 풀었습니다. 유형은 각 풀이 파일의 `유형:` 줄을 따릅니다.
 
 | 유형 | 이럴 때 여기 | 문제 수 |
 | --- | --- | --- |
 | SELECT | 조건(WHERE)과 정렬(ORDER BY)로 원하는 행·열을 골라냄 | 1 |
-| SUM, MAX, MIN | 집계 함수로 합계·최댓값·최솟값·개수를 구함 | 1 |
+| SUM, MAX, MIN | 집계 함수로 합계·최댓값·최솟값·개수를 구함 | 2 |
 | GROUP BY | 그룹별로 묶어 집계하고 HAVING으로 거름 | 1 |
 | IS NULL | NULL 판별과 대체(IFNULL, COALESCE)가 핵심 | 1 |
 | JOIN | 여러 테이블을 키로 연결함 (서브쿼리로 연결하는 것 포함) | 0 |
@@ -632,10 +632,11 @@
 </details>
 
 <details>
-<summary><b>SUM, MAX, MIN</b> (1)</summary>
+<summary><b>SUM, MAX, MIN</b> (2)</summary>
 
 | 문제 | 사이트 | 난이도 | 풀이 | 기록 | 날짜 |
 | --- | --- | --- | --- | --- | --- |
+| [중복 제거하기](https://school.programmers.co.kr/learn/courses/30/lessons/59408) | 프로그래머스 | Lv. 2 | [풀이](sql/PG_LV2_%EC%A4%91%EB%B3%B5%20%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0.md) | ✅ 1 | 2026-11-21 |
 | [가장 비싼 상품 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/131697) | 프로그래머스 | Lv. 1 | [풀이](sql/PG_LV1_%EA%B0%80%EC%9E%A5%20%EB%B9%84%EC%8B%BC%20%EC%83%81%ED%92%88%20%EA%B5%AC%ED%95%98%EA%B8%B0.md) | ✅ 1 | 2026-11-20 |
 
 </details>
