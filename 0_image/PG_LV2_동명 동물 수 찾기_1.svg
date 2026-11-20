@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" width="880" height="470" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="470" fill="#ffffff"/>
+
+  <!-- 헤더 -->
+  <text x="30" y="34" font-size="16" font-weight="bold" fill="#111827">WHERE로 행을 거르고 → GROUP BY로 묶어 세고 → HAVING으로 그룹을 거른다</text>
+  <text x="30" y="56" font-size="13" fill="#6b7280">예시: ANIMAL_INS의 NAME 7개</text>
+
+  <!-- 단계 제목 -->
+  <g font-size="14" font-weight="bold" fill="#374151">
+    <text x="30" y="96">① ANIMAL_INS</text>
+    <text x="320" y="96">② GROUP BY NAME</text>
+    <text x="610" y="96">③ HAVING COUNT(*) &gt;= 2</text>
+  </g>
+
+  <!-- ① 원본 테이블 -->
+  <g font-size="14">
+    <rect x="30" y="110" width="200" height="28" fill="#e5e7eb" stroke="#9ca3af"/>
+    <text x="42" y="129" font-weight="bold" fill="#374151" font-family="Consolas, 'D2Coding', monospace">NAME</text>
+
+    <rect x="30" y="138" width="200" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="42" y="157" fill="#111827">Lucy</text>
+    <rect x="30" y="166" width="200" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="42" y="185" fill="#111827">Raven</text>
+    <rect x="30" y="194" width="200" height="28" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="42" y="213" fill="#dc2626" font-family="Consolas, 'D2Coding', monospace">NULL</text>
+    <text x="96" y="213" font-size="12" fill="#dc2626">← WHERE에서 제외</text>
+    <rect x="30" y="222" width="200" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="42" y="241" fill="#111827">Lucy</text>
+    <rect x="30" y="250" width="200" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="42" y="269" fill="#111827">Ella</text>
+    <rect x="30" y="278" width="200" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="42" y="297" fill="#111827">Raven</text>
+    <rect x="30" y="306" width="200" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="42" y="325" fill="#111827">Lucy</text>
+  </g>
+
+  <!-- 화살표 -->
+  <line x1="242" y1="180" x2="306" y2="180" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="532" y1="180" x2="596" y2="180" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ② 그룹별 개수 -->
+  <g font-size="14">
+    <rect x="320" y="110" width="200" height="28" fill="#e5e7eb" stroke="#9ca3af"/>
+    <text x="332" y="129" font-weight="bold" fill="#374151" font-family="Consolas, 'D2Coding', monospace">NAME</text>
+    <text x="432" y="129" font-weight="bold" fill="#374151" font-family="Consolas, 'D2Coding', monospace">COUNT(*)</text>
+    <line x1="420" y1="110" x2="420" y2="222" stroke="#9ca3af"/>
+
+    <rect x="320" y="138" width="200" height="28" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="332" y="157" fill="#dc2626">Ella</text>
+    <text x="432" y="157" fill="#dc2626">1</text>
+    <rect x="320" y="166" width="200" height="28" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="332" y="185" fill="#111827">Lucy</text>
+    <text x="432" y="185" font-weight="bold" fill="#2563eb">3</text>
+    <rect x="320" y="194" width="200" height="28" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="332" y="213" fill="#111827">Raven</text>
+    <text x="432" y="213" font-weight="bold" fill="#2563eb">2</text>
+    <line x1="420" y1="138" x2="420" y2="222" stroke="#9ca3af"/>
+  </g>
+  <text x="320" y="246" font-size="12" fill="#dc2626">Ella는 1개라 HAVING에서 제외</text>
+
+  <!-- ③ 결과 -->
+  <g font-size="14">
+    <rect x="610" y="110" width="200" height="28" fill="#e5e7eb" stroke="#9ca3af"/>
+    <text x="622" y="129" font-weight="bold" fill="#374151" font-family="Consolas, 'D2Coding', monospace">NAME</text>
+    <text x="722" y="129" font-weight="bold" fill="#374151" font-family="Consolas, 'D2Coding', monospace">COUNT</text>
+
+    <rect x="610" y="138" width="200" height="28" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="622" y="157" fill="#111827">Lucy</text>
+    <text x="722" y="157" font-weight="bold" fill="#2563eb">3</text>
+    <rect x="610" y="166" width="200" height="28" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="622" y="185" fill="#111827">Raven</text>
+    <text x="722" y="185" font-weight="bold" fill="#2563eb">2</text>
+    <line x1="710" y1="110" x2="710" y2="194" stroke="#9ca3af"/>
+  </g>
+  <text x="610" y="218" font-size="12" fill="#6b7280">ORDER BY NAME으로 이름순</text>
+
+  <!-- 코드 대응 -->
+  <line x1="30" y1="362" x2="850" y2="362" stroke="#e5e7eb"/>
+  <g font-size="14" font-family="Consolas, 'D2Coding', monospace" fill="#111827">
+    <text x="30" y="392">WHERE NAME IS NOT NULL</text>
+    <text x="30" y="420">GROUP BY NAME</text>
+    <text x="30" y="448">HAVING COUNT(*) &gt;= 2</text>
+  </g>
+  <g font-size="13" fill="#6b7280">
+    <text x="290" y="392">묶기 전에 행을 거름 (①의 NULL)</text>
+    <text x="290" y="420">같은 이름끼리 묶어 COUNT(*)로 셈 (②)</text>
+    <text x="290" y="448">묶은 뒤의 개수로 그룹을 거름 (②의 Ella)</text>
+  </g>
+</svg>
