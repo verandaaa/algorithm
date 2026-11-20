@@ -38,6 +38,19 @@ const CATEGORIES = [
 ];
 const CATEGORY_NAMES = Object.fromEntries(CATEGORIES.map(([dir, name]) => [dir, name]));
 
+// SQL 풀이는 sql/ 폴더 하나에 모으고, 유형은 파일 안의 `유형: GROUP BY` 줄로 정한다.
+// 알고리즘 집계(요약·유형별·최근 푼 문제)와 섞지 않고 README의 SQL 섹션에만 보여 준다.
+const SQL_DIR = "sql";
+// [유형, 이럴 때 여기] (프로그래머스 SQL 고득점 Kit 분류)
+const SQL_CATEGORIES = [
+  ["SELECT", "조건(WHERE)과 정렬(ORDER BY)로 원하는 행·열을 골라냄"],
+  ["SUM, MAX, MIN", "집계 함수로 합계·최댓값·최솟값·개수를 구함"],
+  ["GROUP BY", "그룹별로 묶어 집계하고 HAVING으로 거름"],
+  ["IS NULL", "NULL 판별과 대체(IFNULL, COALESCE)가 핵심"],
+  ["JOIN", "여러 테이블을 키로 연결함 (서브쿼리로 연결하는 것 포함)"],
+  ["String, Date", "문자열 가공이나 날짜 계산·포맷이 핵심"],
+];
+
 const SITES = {
   BOJ: { name: "백준", url: "https://www.acmicpc.net" },
   PG: { name: "프로그래머스", url: "https://school.programmers.co.kr" },
@@ -130,6 +143,7 @@ function parseSolution(file, dates) {
     pass: count("Pass") + count("Solution"),
     fail: count("Fail"),
     date: dates.get(rel) ?? "",
+    sqlType: category === SQL_DIR ? (content.match(/^유형:\s*(.+?)\s*$/m) || [])[1] ?? "" : undefined,
   };
 }
 
@@ -165,7 +179,8 @@ function sortByLevel(a, b) {
 function build() {
   const dates = addedDates();
   const all = walk(ROOT).map((f) => parseSolution(f, dates));
-  const solutions = all.filter((s) => s.kind === "solution" && s.category !== HOLD_DIR);
+  const solutions = all.filter((s) => s.kind === "solution" && s.category !== HOLD_DIR && s.category !== SQL_DIR);
+  const sql = all.filter((s) => s.kind === "solution" && s.category === SQL_DIR);
   const hold = all.filter((s) => s.kind === "solution" && s.category === HOLD_DIR);
   const others = all.filter((s) => s.kind === "other");
 
@@ -174,7 +189,7 @@ function build() {
 
   // 요약
   push("## 📊 요약", "");
-  push(`총 **${solutions.length}** 문제를 풀었습니다.`, "");
+  push(`총 **${solutions.length}** 문제를 풀었습니다.${sql.length ? ` (SQL ${sql.length}문제는 아래 SQL 섹션에 따로 모았습니다.)` : ""}`, "");
   push("| 사이트 | 문제 수 | 난이도 분포 |", "| --- | --- | --- |");
   for (const [key, site] of Object.entries(SITES)) {
     const list = solutions.filter((s) => s.site === key);
@@ -223,6 +238,26 @@ function build() {
     push(`<details>`, `<summary><b>${CATEGORY_NAMES[c] ?? c}</b> (${list.length})</summary>`, "", header());
     for (const s of list) push(row(s));
     push("", "</details>", "");
+  }
+
+  // SQL (유형은 파일 안의 `유형:` 줄, 기준에 없거나 비어 있으면 뒤에 경고로)
+  if (sql.length) {
+    const typeOf = (s) => s.sqlType || "(유형 없음)";
+    const known = new Set(SQL_CATEGORIES.map(([t]) => t));
+    const unknown = [...new Set(sql.map(typeOf))].filter((t) => !known.has(t)).sort();
+    push("## 🗃️ SQL", "");
+    push(`총 **${sql.length}** 문제를 풀었습니다. 유형은 각 풀이 파일의 \`유형:\` 줄을 따릅니다.`, "");
+    push("| 유형 | 이럴 때 여기 | 문제 수 |", "| --- | --- | --- |");
+    for (const [t, desc] of SQL_CATEGORIES) push(`| ${t} | ${desc} | ${sql.filter((s) => typeOf(s) === t).length} |`);
+    for (const t of unknown) push(`| ${t} | ${t === "(유형 없음)" ? "⚠️ 파일에 `유형:` 줄이 없음" : "⚠️ 분류 기준에 없는 유형"} | ${sql.filter((s) => typeOf(s) === t).length} |`);
+    push("");
+    for (const t of [...SQL_CATEGORIES.map(([t]) => t), ...unknown]) {
+      const list = sql.filter((s) => typeOf(s) === t).sort(sortByLevel);
+      if (!list.length) continue;
+      push(`<details>`, `<summary><b>${t}</b> (${list.length})</summary>`, "", header());
+      for (const s of list) push(row(s));
+      push("", "</details>", "");
+    }
   }
 
   if (hold.length) {
