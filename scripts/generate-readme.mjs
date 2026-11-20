@@ -143,7 +143,7 @@ function parseSolution(file, dates) {
     pass: count("Pass") + count("Solution"),
     fail: count("Fail"),
     date: dates.get(rel) ?? "",
-    sqlType: category === SQL_DIR ? (content.match(/^유형:\s*(.+?)\s*$/m) || [])[1] ?? "" : undefined,
+    sqlType: category === SQL_DIR ? (content.match(/^유형:[ \t]*([^\r\n]*?)[ \t]*\r?$/m) || [])[1] ?? "" : undefined,
   };
 }
 
