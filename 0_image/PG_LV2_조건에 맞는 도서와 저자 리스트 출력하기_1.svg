@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" width="860" height="430" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <rect width="860" height="430" fill="#ffffff"/>
+
+  <!-- 헤더 -->
+  <text x="30" y="34" font-size="16" font-weight="bold" fill="#111827">BOOK의 AUTHOR_ID로 AUTHOR를 찾아 이어 붙이고, 경제 도서만 남긴다</text>
+  <text x="30" y="56" font-size="13" fill="#6b7280">예시: 도서 4권, 저자 2명 (파란 줄이 WHERE를 통과한 경제 도서)</text>
+
+  <g font-size="14" font-weight="bold" fill="#374151">
+    <text x="30" y="96">① BOOK B</text>
+    <text x="560" y="96">② AUTHOR A</text>
+  </g>
+
+  <!-- ① BOOK -->
+  <g font-size="13">
+    <rect x="30" y="110" width="390" height="28" fill="#e5e7eb" stroke="#9ca3af"/>
+    <g font-weight="bold" fill="#374151" font-family="Consolas, 'D2Coding', monospace">
+      <text x="40" y="129">BOOK_ID</text>
+      <text x="120" y="129">CATEGORY</text>
+      <text x="210" y="129">AUTHOR_ID</text>
+      <text x="300" y="129">PUBLISHED_DATE</text>
+    </g>
+
+    <rect x="30" y="138" width="390" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <g fill="#9ca3af"><text x="40" y="157">1</text><text x="120" y="157">인문</text><text x="210" y="157">1</text><text x="300" y="157">2020-01-15</text></g>
+
+    <rect x="30" y="166" width="390" height="28" fill="#dbeafe" stroke="#2563eb"/>
+    <g fill="#111827"><text x="40" y="185">2</text><text x="120" y="185" font-weight="bold" fill="#2563eb">경제</text><text x="210" y="185" font-weight="bold" fill="#2563eb">2</text><text x="300" y="185">2021-03-01</text></g>
+
+    <rect x="30" y="194" width="390" height="28" fill="#dbeafe" stroke="#2563eb"/>
+    <g fill="#111827"><text x="40" y="213">3</text><text x="120" y="213" font-weight="bold" fill="#2563eb">경제</text><text x="210" y="213" font-weight="bold" fill="#2563eb">1</text><text x="300" y="213">2020-07-10</text></g>
+
+    <rect x="30" y="222" width="390" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <g fill="#9ca3af"><text x="40" y="241">4</text><text x="120" y="241">기술</text><text x="210" y="241">2</text><text x="300" y="241">2021-05-05</text></g>
+
+    <g stroke="#9ca3af">
+      <line x1="110" y1="110" x2="110" y2="250"/>
+      <line x1="200" y1="110" x2="200" y2="250"/>
+      <line x1="290" y1="110" x2="290" y2="250"/>
+    </g>
+  </g>
+
+  <!-- ② AUTHOR -->
+  <g font-size="13">
+    <rect x="560" y="110" width="220" height="28" fill="#e5e7eb" stroke="#9ca3af"/>
+    <g font-weight="bold" fill="#374151" font-family="Consolas, 'D2Coding', monospace">
+      <text x="570" y="129">AUTHOR_ID</text>
+      <text x="660" y="129">AUTHOR_NAME</text>
+    </g>
+    <rect x="560" y="138" width="220" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="570" y="157" fill="#111827">1</text><text x="660" y="157" fill="#111827">김작가</text>
+    <rect x="560" y="166" width="220" height="28" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="570" y="185" fill="#111827">2</text><text x="660" y="185" fill="#111827">이작가</text>
+    <line x1="650" y1="110" x2="650" y2="194" stroke="#9ca3af"/>
+  </g>
+
+  <!-- JOIN 연결선: B.AUTHOR_ID = A.AUTHOR_ID -->
+  <g stroke-width="1.5" fill="none">
+    <line x1="420" y1="152" x2="560" y2="152" stroke="#9ca3af" stroke-dasharray="4 4"/>
+    <line x1="420" y1="236" x2="560" y2="180" stroke="#9ca3af" stroke-dasharray="4 4"/>
+    <line x1="420" y1="180" x2="560" y2="180" stroke="#2563eb" stroke-width="2"/>
+    <line x1="420" y1="208" x2="560" y2="152" stroke="#2563eb" stroke-width="2"/>
+  </g>
+  <text x="560" y="222" font-size="12" fill="#6b7280">AUTHOR_ID가 같은 행끼리 연결</text>
+
+  <!-- ③ 결과 -->
+  <text x="30" y="292" font-size="14" font-weight="bold" fill="#374151">③ 결과 (경제만, 출판일순)</text>
+  <g font-size="13">
+    <rect x="30" y="306" width="330" height="28" fill="#e5e7eb" stroke="#9ca3af"/>
+    <g font-weight="bold" fill="#374151" font-family="Consolas, 'D2Coding', monospace">
+      <text x="40" y="325">BOOK_ID</text>
+      <text x="120" y="325">AUTHOR_NAME</text>
+      <text x="240" y="325">PUBLISHED_DATE</text>
+    </g>
+    <rect x="30" y="334" width="330" height="28" fill="#ffffff" stroke="#9ca3af"/>
+    <text x="40" y="353" fill="#111827">3</text><text x="120" y="353" font-weight="bold" fill="#2563eb">김작가</text><text x="240" y="353" fill="#111827">2020-07-10</text>
+    <rect x="30" y="362" width="330" height="28" fill="#ffffff" stroke="#9ca3af"/>
+    <text x="40" y="381" fill="#111827">2</text><text x="120" y="381" font-weight="bold" fill="#2563eb">이작가</text><text x="240" y="381" fill="#111827">2021-03-01</text>
+    <g stroke="#9ca3af">
+      <line x1="110" y1="306" x2="110" y2="390"/>
+      <line x1="230" y1="306" x2="230" y2="390"/>
+    </g>
+  </g>
+  <text x="30" y="412" font-size="12" fill="#6b7280">파란 글자는 AUTHOR에서 가져온 값</text>
+
+  <!-- 코드 대응 -->
+  <g font-size="13" font-family="Consolas, 'D2Coding', monospace" fill="#111827">
+    <text x="410" y="320">LEFT JOIN AUTHOR A ON B.AUTHOR_ID = A.AUTHOR_ID</text>
+    <text x="410" y="364">WHERE B.CATEGORY = '경제'</text>
+    <text x="410" y="408">ORDER BY PUBLISHED_DATE</text>
+  </g>
+  <g font-size="12" fill="#6b7280">
+    <text x="410" y="340">② AUTHOR를 이어 붙여 AUTHOR_NAME을 얻음</text>
+    <text x="410" y="384">이어 붙인 뒤 경제 도서만 남김 (파란 줄)</text>
+    <text x="620" y="408">출판일 오름차순</text>
+  </g>
+</svg>
